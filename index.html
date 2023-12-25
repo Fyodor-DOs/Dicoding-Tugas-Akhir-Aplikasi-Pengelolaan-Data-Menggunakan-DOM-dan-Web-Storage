@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Aplikasi Pengelolaan Data Menggunakan DOM dan Web Storage</h1>
+
+      <div class="input-section">
+        <label for="title">Judul:</label>
+        <input type="text" id="title" placeholder="Crime and Punishment" />
+
+        <label for="author">Penulis:</label>
+        <input type="text" id="author" placeholder="Fyodor Dostoevsky" />
+
+        <label for="year">Tahun:</label>
+        <input type="text" id="year" placeholder="1866" />
+
+        <label for="status">Status:</label>
+        <select id="status">
+          <option value="unread">Belum selesai dibaca</option>
+          <option value="read">Selesai dibaca</option>
+        </select>
+
+        <button onclick="addBook()">Tambah Buku</button>
+      </div>
+
+      <div class="bookshelves">
+        <div class="bookshelf" id="unread-shelf">
+          <h2>Belum selesai dibaca</h2>
+          <ul id="unread-list"></ul>
+        </div>
+
+        <div class="bookshelf" id="read-shelf">
+          <h2>Selesai dibaca</h2>
+          <ul id="read-list"></ul>
+        </div>
+      </div>
+    </div>
+
+    <script src="buku.js"></script>
+  </body>
+</html>
